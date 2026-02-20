@@ -1,0 +1,123 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.75em;
+    margin-bottom: 30px;
+}
+
+h1::before {
+    content: 'w ';
+    font-size: 0.75em;
+    color: #666;
+    display: inline-block;
+    width: 30px;
+}
+
+h2,
+h3 {
+    margin-top: 60px;
+}
+
+h2,
+p {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+code {
+    border: #666 solid 1px;
+    background-color: #eee;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+pre {
+    margin: 30px 0;
+    color: #eee;
+    background-color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 30px;
+    overflow-x: auto;
+    position: relative;
+}
+
+pre::after {
+    content: '.w';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #333;
+    background-color: #fff;
+    padding: 0 5px;
+    border-radius: 0 0 5px 0;
+}
+
+.menu {
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 64px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1;
+}
+
+.container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding-top: 0;
+    position: relative;
+}
+
+.footer {
+    border-top: 1px dashed #ccc;
+    margin-top: 60px;
+    padding: 60px 15px;
+    text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    h1,
+    h2,
+    h3 {
+        text-align: left;
+    }
+
+    .menu {
+        text-align: left;
+        width: 200px;
+        padding-top: 30px;
+        position: fixed;
+        top: 0;
+        left: calc(50% - 320px);
+        box-shadow: none;
+    }
+
+    .logo {
+        font-size: 128px;
+    }
+
+    .container {
+        padding-top: 30px;
+        min-height: 500px;
+        padding-left: 230px;
+    }
+}
